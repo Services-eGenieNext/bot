@@ -1,0 +1,67 @@
+.lawly-freetext.input-group {
+  //display: inline-block;
+  width: 100%;
+  position: relative;
+  margin-bottom: 16px;
+
+  .input-group-prepend {
+    display: block;
+    margin-right: auto;
+    height: 32px;
+    position: absolute;
+    z-index: 6;
+    padding: 4px 0 0 16px;
+  }
+
+  textarea {
+    font-size: 16px;
+    overflow: hidden;
+    resize: none;
+  }
+
+  input {
+    font-size: 20px;
+    height: 76px;
+  }
+
+  .api-input .form-control {
+    border-radius: 8px 0 0 8px;
+  }
+
+  .form-control {
+    display: inline-block;
+    border-radius: 8px;
+    padding: 36px 16px 12px;
+
+    &:focus {
+      border-color: #ffc107;
+      box-shadow: 0 0 0 0.2rem rgba(255, 191, 0, 0.25);
+    }
+
+    &::placeholder {
+      color: #bdbdbd;
+    }
+  }
+
+  .input-group-text {
+    background: transparent;
+    color: #000;
+    border: 0;
+    font-size: 13px;
+    padding: 0;
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+
+  .btn.btn-primary {
+    width: 80px;
+    margin-left: -1px;
+    border-radius: 0 8px 8px 0;
+  }
+}

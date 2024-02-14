@@ -1,0 +1,43 @@
+{
+  "generics": {
+    "title": "welcome",
+    "isThisCorrect": "Is this correct?"
+  },
+
+  "buttons": {
+    "add": "Add",
+    "edit": "Edit",
+    "edit_alt": "Edit",
+    "start": "Start",
+    "previous": "Previous",
+    "skipQuestion": "Skip this question right now",
+    "skipQuestionSubTitle": "(It will come up again later)",
+    "next": "Next",
+    "remove": "Remove",
+    "back": "Back",
+    "finish": "Finish",
+    "startChapter": "Start chapter {{n}}",
+    "goOnWithChapter": "Go on with chapter {{n}}",
+    "sendReply": "Send Reply"
+  },
+
+  "titles": {
+    "chapter": "Chapter"
+  },
+
+  "form": {
+    "pickItem": "Pick one item:"
+  },
+
+  "validations": {
+    "personnummer": "Please enter a valid social security number / organization number",
+    "phone": "Please enter a valid phone number.",
+    "email": "Please enter a valid email address.",
+    "name": "Please enter a valid name.",
+    "date": "Please enter a valid date.",
+    "number": "Please enter a valid number.",
+    "pattern": "Please enter a valid value.",
+    "not_accounted_all": "You have not accounted for 100%",
+    "more_than_full": "The total is more than 100%"
+  }
+}

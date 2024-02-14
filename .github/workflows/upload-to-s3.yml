@@ -1,0 +1,82 @@
+name: Upload to S3
+
+on:
+  push:
+    branches:
+      - main
+      - development
+
+env:
+  AWS_REGION: eu-north-1
+
+jobs:
+  setup-stage:
+    outputs:
+      AWS_KEY_ID: ${{ steps.aws_access_id.outputs.aws_access_id }}
+      AWS_SECRET_KEY: ${{ steps.aws_access_key.outputs.aws_access_key }}
+      BUCKET: ${{ steps.bucket.outputs.bucket }}
+      URL: ${{ steps.url.outputs.url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup AWS Id
+        id: aws_access_id
+        run: echo "aws_access_id=${{ fromJSON('{"main":"AWS_ACCESS_KEY_ID_PROD","development":"AWS_ACCESS_KEY_ID_STAGE"}')[github.ref_name] }}" >> $GITHUB_OUTPUT
+
+      - name: Setup AWS Key
+        id: aws_access_key
+        run: echo "aws_access_key=${{ fromJSON('{"main":"AWS_SECRET_ACCESS_KEY_PROD","development":"AWS_SECRET_ACCESS_KEY_STAGE"}')[github.ref_name] }}" >> $GITHUB_OUTPUT
+
+      - name: Setup Bucket
+        id: bucket
+        run: echo "bucket=${{ fromJSON('{"main":"lawlybot-prod","development":"lawlybot-stage"}')[github.ref_name] }}" >> $GITHUB_OUTPUT
+
+      - name: Setup url
+        id: url
+        run: echo "url=${{ fromJSON('{"main":"bot","development":"bot-stage"}')[github.ref_name] }}" >> $GITHUB_OUTPUT
+
+  build-and-deploy:
+    needs: setup-stage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract branch name
+        run: |
+          echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
+
+      - name: Set urls and paths
+        run: |
+          echo "PUBLIC_URL=https://${{ needs.setup-stage.outputs.URL }}.lawly.io/${{ github.sha }}/" >> $GITHUB_ENV
+          echo "LAWLY_VERSION=${{ github.sha }}" >> $GITHUB_ENV
+          echo "LAWLY_BRANCH=${{ github.ref }}" >> $GITHUB_ENV
+          echo "S3_SHA_PATH=s3://${{ needs.setup-stage.outputs.BUCKET }}/${{ github.sha }}/" >> $GITHUB_ENV
+          echo "S3_LATEST_PATH=s3://${{ needs.setup-stage.outputs.BUCKET }}/latest/" >> $GITHUB_ENV
+
+      - uses: actions/checkout@v3
+
+      - name: Setup nodejs
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - uses: actions/cache@v3
+        with:
+          path: "node_modules"
+          key: ${{ runner.os }}-modules-${{ hashFiles('yarn.lock') }}
+
+      - name: Install packages
+        run: yarn install
+
+      - name: Build
+        run: yarn run build
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1-node16
+        with:
+          aws-access-key-id: ${{ secrets[needs.setup-stage.outputs.AWS_KEY_ID] }}
+          aws-secret-access-key: ${{ secrets[needs.setup-stage.outputs.AWS_SECRET_KEY] }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Upload to S3
+        run: aws s3 sync ./build/ $S3_SHA_PATH --delete --cache-control max-age=60
+
+      - name: Copy deployment to latest folder
+        run: aws s3 cp $S3_SHA_PATH $S3_LATEST_PATH --recursive

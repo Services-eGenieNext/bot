@@ -1,0 +1,11 @@
+.buttonsContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 24px;
+
+  & > * {
+    margin: 0 8px;
+  }
+}

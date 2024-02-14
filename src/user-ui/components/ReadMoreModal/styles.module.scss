@@ -1,0 +1,147 @@
+.read-more-button {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  align-items: center;
+  height: 48px;
+  background-color: #c0d4ff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 25px 0 25px;
+
+  &:hover {
+    & > svg {
+      transform: scale(1.1);
+    }
+  }
+
+  svg {
+    transition: all 0.3s ease-in-out;
+    color: #2c6fff;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.read-more-btn-container {
+  cursor: pointer;
+}
+
+.read-more-title {
+  white-space: nowrap;
+  color: #2c6fff;
+  font-size: 13px;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.modal-close-button {
+  font-size: 12px;
+  color: #828282;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+
+  .modal-close-icon {
+    font-size: 24px;
+    height: 100%;
+    color: #000;
+  }
+
+  .modal-close-label {
+    width: 60px;
+    margin: 8px auto auto -12px;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.question-modal {
+  &::-webkit-scrollbar {
+    width: 0;
+    display: none;
+  }
+
+  .modal-body {
+    padding: 25px 15px 0;
+    max-height: calc(100% - 134px);
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .modal-body-inner {
+    padding: 25px 20px;
+    border-radius: 8px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #a5a5a5;
+      border-radius: 25px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      background-color: transparent;
+    }
+  }
+
+  .modal-dialog {
+    width: 100%;
+    height: 100%;
+    top: 28px;
+    margin-left: auto;
+    display: flex;
+    max-height: calc(100% - 28px);
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .modal-content {
+    border: 0;
+    border-radius: 25px 25px 0 0;
+    animation: modalSlideUp 300ms;
+
+    &.modal-closing {
+      animation: modalSlideDown 300ms;
+    }
+  }
+
+  .modal-footer {
+    border: none;
+    height: 125px;
+    justify-content: center;
+  }
+}
+
+@keyframes modalSlideUp {
+  from {
+    top: 100%;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes modalSlideDown {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}

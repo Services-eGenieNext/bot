@@ -1,0 +1,47 @@
+[
+  {
+    "id": "personnummer-api-template-1",
+    "label": "Personnummer",
+    "endpoint": {
+      "value": "https://api-stage.lawly.io/dev/bot/uniqueid?unique_id={{this.input}}",
+      "editable": false
+    },
+    "payload": {
+      "value": "",
+      "editable": false
+    },
+    "component": {
+      "type": "freespeech",
+      "props": {
+        "title": "ange ditt personnummer",
+        "hint": "XXXXXX-XXXX",
+        "validation": {
+          "type": "unique_id"
+        }
+      },
+      "editable": false
+    }
+  },{
+    "id": "mock-api-freespeech",
+    "label": "Mock Freespeech",
+    "endpoint": {
+      "value": "https://4fcc3d92-af01-4014-b218-a5b78d772dda.mock.pstmn.io/dev/bot/uniqueid/{{this.input}}?freespeech",
+      "editable": false
+    },
+    "payload": {
+      "value": "",
+      "editable": false
+    },
+    "component": {
+      "type": "freespeech",
+      "props": {
+        "title": "ange ditt personnummer",
+        "hint": "XXXXXX-XXXX",
+        "validation": {
+          "type": "unique_id"
+        }
+      },
+      "editable": false
+    }
+  }
+]

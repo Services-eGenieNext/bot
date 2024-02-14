@@ -1,0 +1,19 @@
+@import '~bootstrap/scss/bootstrap';
+
+.lawly-root {
+  position: relative;
+  background-color: #6514dd;
+  margin: auto;
+  padding: 0 0 100px 0;
+  color: #111;
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
+  Helvetica, 'Roboto', 'Segoe UI', Arial, 'Lucida Grande', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.011em;
+  line-height: 1.43;
+  width: 100%;
+  min-height: 100%;
+  max-width: 428px;
+  min-width: 320px;
+}

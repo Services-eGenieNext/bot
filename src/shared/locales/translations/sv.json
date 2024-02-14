@@ -1,0 +1,43 @@
+{
+  "generics": {
+    "title": "Välkommen",
+    "isThisCorrect": "Stämmer dina svar?"
+  },
+
+  "buttons": {
+    "add": "Lägg till",
+    "edit": "Ändra",
+    "edit_alt": "Redigera",
+    "start": "Starta",
+    "previous": "Föregående",
+    "skipQuestion": "Hoppa över fråga",
+    "skipQuestionSubTitle": "Du får svara på den senare",
+    "next": "Nästa",
+    "remove": "Ta bort",
+    "back": "Tillbaka",
+    "finish": "Klar",
+    "startChapter": "Starta kapitel {{n}}",
+    "goOnWithChapter": "Fortsätt med kapitel {{n}}",
+    "sendReply": "Skicka svar"
+  },
+
+  "titles": {
+    "chapter": "Kapitel"
+  },
+
+  "form": {
+    "pickItem": "Välj ett alternativ:"
+  },
+
+  "validations": {
+    "personnummer": "Ange ett giltigt personnummer / org-nummer.",
+    "phone": "Ange ett giltigt telefonnummer.",
+    "email": "Ange ett giltigt e-postadress.",
+    "name": "Ange ett giltigt namn.",
+    "date": "Ange ett giltigt datum.",
+    "number": "Ange ett giltigt nummer.",
+    "pattern": "Ange ett giltigt svar.",
+    "not_accounted_all": "Du har redogjort för mindre än 100%",
+    "more_than_full": "Totalen av procenten överskrider 100%"
+  }
+}

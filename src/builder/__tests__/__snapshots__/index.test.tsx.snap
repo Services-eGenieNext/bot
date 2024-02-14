@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> getApp should render BotBuilder directly 1`] = `
+<StylesProvider
+  generateClassName={[Function]}
+>
+  <BotEditor />
+</StylesProvider>
+`;
+
+exports[`<App /> getApp should render BotBuilder using get app 1`] = `
+<Provider
+  store={
+    Object {
+      "createReducer": [Function],
+      "dispatch": [Function],
+      "getState": [Function],
+      "injectedReducers": Object {},
+      "injectedSagas": Object {},
+      "replaceReducer": [Function],
+      "runSaga": [Function],
+      "subscribe": [Function],
+      Symbol(Symbol.observable): [Function],
+    }
+  }
+>
+  <UNDEFINED>
+    <ErrorBoundary>
+      <BotBuilder />
+    </ErrorBoundary>
+  </UNDEFINED>
+</Provider>
+`;

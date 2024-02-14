@@ -1,0 +1,65 @@
+.lawly-range-input {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  height: 76px;
+  padding: 40px 20px 60px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+
+  .input-group-prepend {
+    display: block;
+    margin-right: auto;
+    height: 24px;
+    position: absolute;
+    z-index: 6;
+    top: 12px;
+    left: 20px;
+  }
+
+  .input-group-text {
+    background: transparent;
+    color: #000;
+    border: 0;
+    font-size: 13px;
+    padding: 0;
+  }
+
+  .range-value {
+    text-align: center;
+    width: 100%;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  input[type='range'] {
+    background: linear-gradient(to right, #00d166 0%, #00d166 50%, #e9e9e9 50%, #e9e9e9 100%);
+    border-radius: 8px;
+    height: 7px;
+    width: 100%;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fff;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    &::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fff;
+      cursor: pointer;
+    }
+  }
+}

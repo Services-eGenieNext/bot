@@ -1,0 +1,27 @@
+.overview-footer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  align-content: center;
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /*
+  background-color: #6514dd;
+  height: 100px;
+  padding: 24px;
+  */
+}
+
+.submit-button {
+  max-width: 376px;
+
+  &:disabled {
+    /*
+    background-color: #4a11a5;
+    color: #c1a2f1;
+     */
+  }
+}

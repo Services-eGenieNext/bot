@@ -1,0 +1,165 @@
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed
+}
+
+:root {
+    --rowGap: 0;
+    --columnGap: 0;
+    --containerGutter: 0;
+    --nav-padding: 0;
+    --headerHeight: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 0 0;
+}
+
+.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+
+.row:last-child {
+}
+
+.col {
+    -webkit-flex: none;
+    flex: none;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0;
+    flex: 1 1 0
+}
+
+
+@media (max-width: 480px) {
+    .row {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        flex-direction: row
+    }
+}
+
+
+body, html {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5
+}
+
+body {
+    color: #637381
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400
+}
+
+:after, :before {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 13px
+    }
+}
+
+body, html {
+    height: 100%;
+}
+
+.wrapper {
+    max-width: 100%
+}
+
+body {
+    background: #fff
+}
+
+.fullsize {
+    overflow: hidden
+}
+
+.fullsize #page-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-flex: 2;
+    -webkit-flex: 2 0 0;
+    flex: 2 0 0;
+    height: 100vh
+}
+
+.fullsize #page-wrapper .wrapper {
+    margin: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0;
+    flex: 1 1 0
+}
+
+.fullsize #page-wrapper .wrapper .col, .fullsize #page-wrapper .wrapper .row {
+    height: 100%
+}
+
+#page-wrapper {
+    position: relative;
+    overflow-y: auto;
+    min-height: 100%;
+    height: 100%
+}
+
+#bot-crud {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    border: 1px solid #f2f2f2;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    overflow: hidden
+}
+
+#bot-crud:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #111;
+    z-index: 100
+}
+
+#bot-crud.loaded:after {
+    opacity: 0;
+    pointer-events: none
+}

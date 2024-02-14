@@ -1,0 +1,63 @@
+
+.api-confirm {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  border-radius: 8px;
+  background-color: #2ecc71;
+}
+
+.checkIcon {
+  flex: 1 1 10%;
+  fill: #fff;
+  max-width: 14px;
+}
+
+.reject-btn {
+  flex: 1 1 10%;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #29bd67;
+  fill: #139248;
+  border-width: 0;
+  border-radius: 14px;
+  max-width: 96px;
+  height: 30px;
+  display: inline-block;
+  line-height: 10px;
+  margin: 0;
+  padding: 0;
+
+  svg {
+    margin-right: 4px;
+  }
+
+  &:hover, &:not(:disabled):not(.disabled):active {
+    background-color: #1be571;
+    border-color: #1be571;
+  }
+
+  &:focus, &:not(:disabled):not(.disabled):active:focus {
+    // outline: 0;
+    // border-color: #1be571;
+    //box-shadow: 0 0 0.5rem rgba(#1be571, 0.8)
+  }
+}
+
+.lines {
+  flex: 1 1 auto;
+  margin-left: 16px;
+  font-size: 14px;
+  line-height: 16px;
+
+  .line1 {
+    color: #fff;
+  }
+
+  .line2 {
+    color: #88ffba;
+  }
+}

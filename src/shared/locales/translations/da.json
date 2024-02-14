@@ -1,0 +1,43 @@
+{
+  "generics": {
+    "title": "Velkommen",
+    "isThisCorrect": "Er dine svar korrekte?"
+  },
+
+  "buttons": {
+    "add": "Tilføj",
+    "edit": "Ændre",
+    "edit_alt": "Rediger",
+    "start": "Start",
+    "previous": "Forrige",
+    "skipQuestion": "Spring spørgsmål over",
+    "skipQuestionSubTitle": "Du kan besvare det senere",
+    "next": "Næste",
+    "remove": "Fjern",
+    "back": "Tilbage",
+    "finish": "Færdig",
+    "startChapter": "Start kapitel {{n}}",
+    "goOnWithChapter": "Fortsæt med kapitel {{n}}",
+    "sendReply": "Send svar"
+  },
+
+  "titles": {
+    "chapter": "Kapitel"
+  },
+
+  "form": {
+    "pickItem": "Vælg en vare:"
+  },
+
+  "validations": {
+    "personnummer": "Indtast et gyldigt personnummer / org-nummer.",
+    "phone": "Indtast et gyldigt telefonnummer.",
+    "email": "Indtast en gyldig e-mailadresse.",
+    "name": "Indtast et gyldigt navn.",
+    "date": "Indtast en gyldig dato.",
+    "number": "Indtast et gyldigt nummer.",
+    "pattern": "Indtast et gyldigt svar.",
+    "not_accounted_all": "Du har gjort rede for mindre end 100%",
+    "more_than_full": "Summen af procentdelene overstiger 100%"
+  }
+}

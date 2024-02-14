@@ -1,0 +1,57 @@
+.action-button {
+  /*
+  border-radius: 25px;
+  color: #ffffff !important;
+  height: 50px;
+  padding: 12px;
+  font-size: 16px;
+  line-height: 16px;
+  vertical-align: middle;
+  min-width: 110px;
+  */
+
+  position: relative;
+
+  /*
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  &:hover {
+    color: #fff;
+  }
+  */
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &.full-width {
+    width: 100%;
+
+    .icon {
+      display: inline-block;
+      position: absolute;
+      right: 20px;
+    }
+  }
+}
+
+.icon {
+  fill: #fff;
+  margin-left: 12px;
+}
+
+
+.green-bg {
+  background-color: #3bcf79;
+}
+
+.orange-bg {
+  background-color: #ffc107;
+}
+
+.red-bg {
+  background-color: #e74c3c;
+}

@@ -1,0 +1,43 @@
+{
+  "generics": {
+    "title": "Tervetuloa",
+    "isThisCorrect": "Ovatko vastauksesi oikein?"
+  },
+
+  "buttons": {
+    "add": "Lisää",
+    "edit": "Muokkaa",
+    "edit_alt": "Muokkaa",
+    "start": "Aloita",
+    "previous": "Edellinen",
+    "skipQuestion": "Ohita kysymys",
+    "skipQuestionSubTitle": "Kysymme tätä uudelleen myöhemmin",
+    "next": "Seuraava",
+    "remove": "Poista",
+    "back": "Takaisin",
+    "finish": "Valmis",
+    "startChapter": "Aloita osio {{n}}",
+    "goOnWithChapter": "Jatka osiota {{n}}",
+    "sendReply": "Lähetä vastaus"
+  },
+
+  "titles": {
+    "chapter": "Osio"
+  },
+
+  "form": {
+    "pickItem": "Valitse vaihtoehdoista"
+  },
+  
+  "validations": {
+    "personnummer": "Anna voimassa oleva henkilötunnus / Y-tunnus.",
+    "phone": "Anna voimassa oleva puhelinnumero.",
+    "email": "Anna voimassa oleva sähköpostiosoite.",
+    "name": "Kirjoita virallinen nimi.",
+    "date": "Kirjoita oikea päiväys.",
+    "number": "Anna kelvollinen numero.",
+    "pattern": "Anna kelvollinen vastaus.",
+    "not_accounted_all": "Et ole vielä päättänyt omaisuutesi jaosta 100%",
+    "more_than_full": "Yhteensä yli 100 %"
+  }
+}

@@ -1,0 +1,155 @@
+.overview-card-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  &:not(:first-child) {
+    margin-top: 36px;
+  }
+}
+
+.overview-card-header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-left: -12px;
+  width: 100%;
+
+  .status {
+    border-radius: 50%;
+    background-color: #4e09b5;
+    opacity: 0.50;
+    display: inline-block;
+    min-width: 28px;
+    max-height: 28px;
+    line-height: 28px;
+    text-align: center;
+    fill: transparent;
+
+    &.completed {
+      background-color: #3bcf79;
+      opacity: 1;
+      fill: #fff;
+    }
+
+    &.has-error {
+      background-color: #dc3545;
+      opacity: 1;
+      fill: #fff;
+
+      > svg {
+        vertical-align: -0.25em;
+      }
+    }
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.015rem;
+    color: #fff;
+    margin-left: 12px;
+    width: 100%;
+
+    &.active {
+      color: #111;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
+
+.overview-header {
+  border-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.overview-card {
+  position: relative;
+  z-index: 1;
+  border-radius: 25px;
+  margin-top: 32px;
+  min-width: 100%;
+  border: 0;
+
+  .collapsedIconContainer {
+    height: 100%;
+  }
+
+  .collapsed-icon {
+    transform: rotate(-90deg);
+    width: 24px;
+    height: 24px;
+  }
+
+  &.collapsed {
+    background-color: transparent;
+
+    .collapsed-icon {
+      transform: rotate(0deg);
+      fill: #fff;
+    }
+
+    .overview-header {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .title.active {
+      color: #fff;
+    }
+  }
+
+  &.collapsed :global(.card-body) {
+    background-color: #7831e1;
+    color: #fff;
+    border: 0;
+  }
+
+  &:global(.not-toggleable) {
+    .collapsed-icon {
+      visibility: hidden;
+    }
+  }
+
+  &:global(.disabled) {
+    border: 0;
+    background-color: transparent !important;
+
+    .overview-header {
+      border: 0;
+    }
+  }
+
+  &:global(.disabled) :global(.card-body) {
+    border-top: 0;
+    background-color: #7831e1;
+  }
+
+  :global {
+    .card-body {
+      border: 0;
+      background-color: #f9f9f9;
+      border-radius: 25px;
+      position: relative;
+      z-index: 2;
+      transition: all 0.3s ease-in-out;
+      padding: 1rem 0;
+    }
+  }
+}
+
+.start-button {
+  max-width: 330px;
+  margin-top: 0;
+
+  &:disabled {
+    background-color: #560bc6;
+    color: #8737ff;
+
+    svg {
+      fill: #8737ff;
+    }
+  }
+}

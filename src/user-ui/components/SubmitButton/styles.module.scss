@@ -1,0 +1,25 @@
+.submit-button {
+  position: absolute;
+  top: calc(100% - 68px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 650px;
+  /*
+  border-radius: 25px;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  color: #ffffff;
+  background-color: #ffc107;
+  font-size: 15px;
+  height: 50px;
+  font-weight: bold;
+
+  &:hover {
+    color: #ffffff;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+  }
+  */
+}
